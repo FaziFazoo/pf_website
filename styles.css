@@ -1,3 +1,9 @@
+:root{
+    --font-1:'Ubuntu', sans-serif;
+    --font-2:'Ruda', sans-serif;
+    --font-3:'Inter', sans-serif;
+}
+
 *{
     padding: 0;
     margin:0;
@@ -6,14 +12,8 @@
     list-style: none;
 }
 
-
-body{
-    font-family: 'Ubuntu', sans-serif;
-    position: relative;
-    
-   
-}
 nav{
+    font-family: var(--font-1);
     border-radius: 8px;
     background: #F8F6F4;
     height: 80px;
@@ -47,7 +47,7 @@ nav ul li a{
     color:black;
     padding: 7px 13px;
     font-size: 18px;
-    border-radius: 3px;
+    border-radius: 12px;
     font-style: normal;
     padding:  5px 10px;
 }
@@ -72,6 +72,79 @@ a.active,a:hover{
     display:none;
 }
 
+
+    
+
+section{
+    background: url(10.png) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+    background-position: center;
+    background-attachment: fixed;
+   
+    
+}
+.container{
+    font-family: var(--font-3);
+    width:450px;
+    height:200px;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    
+}
+.typewriter {
+    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap; /* Prevent line breaks */
+    letter-spacing: 0.1em; /* Adjust spacing for typewriter effect */
+    animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+    color: #FFF;
+    font-size: 38px;
+    font-weight: 400px;
+    line-height: auto;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #000;
+    }
+  }
+  
+h3{
+    color: rgba(255, 242, 242, 0.61);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+}
+
+.glass{
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+}
+
 @media (max-width:952px){
     
     label.logo{
@@ -80,12 +153,6 @@ a.active,a:hover{
     }
     nav ul li a{
         font-size: 16px;
-    }
-    .container{
-        width:10%;
-        height:75%;
-        position: fixed;
-
     }
 }
 @media (max-width:858px){
@@ -99,18 +166,22 @@ a.active,a:hover{
     ul{
         position: fixed;
         width: 100px;
-        height: 100vh;
+        height: auto;
         background:#F8F6F4;
-        top:80px;
+        top:60px;
         left: -100%;
         text-align: center;
         transition: all .5s;
+    }
+    nav{
+        position:fixed;
+        z-index:100;
     }
 
     nav ul li {
         display: block;
         margin: 50px 0;
-        line-height: 30px;
+        line-height: 10px;
     }
 
     nav ul li a{
@@ -122,54 +193,18 @@ a.active,a:hover{
         color: white;
     }
     #check:checked ~ ul{
-        left: 0 ;
+        left:0 ;
     }
     
-     
-}
-    
-
-section{
-    background: url(10.png) no-repeat;
-    background-size: cover;
-    height: calc(100vh - 80px);
-    background-position: center;
-   
-    
-}
-.container{
-    width:500px;
-    height:200px;
-    margin: auto;
-    display: grid;
-    place-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    
-}
-.glass{
-    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 29px;
-    border: 1px solid rgba(255,255,255,0.18);
-    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
-}
-h1{
-    color: #FFF;
-    font-size: 44px;
-    font-style: normal;
-    font-weight: 400;
-    text-align: center;
-    line-height: normal;
-}
-h3{
-    color: rgba(255, 242, 242, 0.61);
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    .container{
+        width:300px;
+        height:150px;
+        
+    }
+    .typewriter{
+       font-size: 28px; 
+    }
+    h3{
+        font-size: 13px;
+    }
 }
