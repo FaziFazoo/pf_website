@@ -1,0 +1,116 @@
+@media (max-width:952px){
+    
+    label.logo{
+        font-size: 30px;
+        padding-left: 45px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width:658px){
+
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        position: fixed;
+        width: 100px;
+        height: auto;
+        background:#F8F6F4;
+        top:60px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav{
+        position:relative;
+        z-index:100;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 10px;
+    }
+
+    nav ul li a{
+        font-size: 12px;
+    }
+    
+    a:hover, a.active{
+        background:black;
+        color: white;
+    }
+    nav.sticky{
+        background: black;
+    }
+    .sticky ul {
+        background: black;
+        backdrop-filter: blur(10px); ;
+        backdrop-filter: blur(20px);
+        color: #FFF;
+    }
+    .sticky ul li a{
+        color:rgb(246, 239, 239);
+    }
+    .sticky .logo{
+        color: #F8F6F4;
+    }
+    .sticky .checkbtn{
+        color: #FFF;
+    }
+    
+.sticky a.active , .sticky a:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transition:  .3s;
+}
+
+
+    #check:checked ~ ul{
+        left:0 ;
+    }
+    
+    .container{
+        width:300px;
+        height:150px;
+        
+    }
+    .name{
+       font-size: 28px; 
+    }
+    h3{
+        font-size: 13px;
+    }
+    .aboutme{
+        margin-left: 30px;
+
+    }
+    .aboutme > h1{
+        font-size: 18px;
+    }.aboutme > p{
+        font-size: 10px;
+    }
+    .cont{
+        margin-left: 5px;
+    }
+    @keyframes barFull {
+        from {width:0px;}
+        to {width:300px;}
+    }
+    @keyframes barHigh {
+        from {width:0px;}
+        to {width:250px;}
+    }
+    @keyframes barHalf {
+        from {width:0px;}
+        to {width:150px;}
+    }
+    @keyframes barLow {
+        from {width:0px;}
+        to {width:50px;}
+    }
+    
+}

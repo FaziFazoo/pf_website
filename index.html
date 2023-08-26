@@ -20,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media.css">
     <!-- Font-awesome -->
      <script src="https://kit.fontawesome.com/09ffbb126a.js" crossorigin="anonymous"></script>
 </head>
@@ -33,19 +34,19 @@
         </label>
         <label class="logo">Faz</label>
         <ul>
-            <li><a class="active" href="#">home</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">skills</a></li>
+            <li><a class="active" href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#skills">skills</a></li>
             <li><a href="#">my projects</a></li>
             <li><a href="#">contacts</a></li>
         </ul>
     </nav>
     </header>
-    
-    <section>
+    <!-- main-container -->
+    <section id="home">
         <div class="container glass">
             <div class="name-div">
-                <div class="typewriter">
+                <div class="name typewriter">
                     <span>Fazil Farook</span>
                 </div>
                 
@@ -53,5 +54,115 @@
             </div>
         </div>
     </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="aboutme">
+            <h1>I am Fazil Farook</h1>
+            <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+        </div>
+        <div class="pimage">
+            <img src="#" alt="#">
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <div class="cont">
+            <!--<h1>Skill Bar Graph.</h1>-->
+            <div class="tableWrapper">
+              <table>
+                <tr>
+                  <td class="skillGraphItem">
+                    HTML
+                  </td>
+                  <td>
+                    <div class="yellowBarFull"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="skillGraphItem">
+                    CSS
+                  </td>
+                  <td>
+                    <div class="blueBarFull"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="skillGraphItem">
+                    Javascript
+                  </td>
+                  <td>
+                    <div class="yellowBarHigh"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="skillGraphItem">
+                    Python
+                  </td>
+                  <td>
+                    <div class="blueBarHigh"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>&nbsp;
+          
+                  </td>
+                </tr>
+                <tr>
+                  <td class="skillGraphItem">
+                    Express.js
+                  </td>
+                  <td>
+                    <div class="yellowBarHigh"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="skillGraphItem">
+                    React.js
+                  </td>
+                  <td>
+                    <div class="blueBarFull"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="skillGraphItem">
+                    Figma
+                  </td>
+                  <td>
+                    <div class="yellowBarFull"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>&nbsp;
+          
+                  </td>
+                </tr>
+                <tr>
+                  <td class="skillGraphItem">
+                    Bootstap
+                  </td>
+                  <td>
+                    <div class="blueBarHigh"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="skillGraphItem">
+                    Git&Github
+                  </td>
+                  <td>
+                    <div class="yellowBarFull"></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+    </section>
+
+    <script src="app.js"></script>
 </body>
 </html>

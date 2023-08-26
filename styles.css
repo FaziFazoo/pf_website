@@ -11,17 +11,25 @@
     box-sizing: border-box;
     list-style: none;
 }
+body{
+    margin:0;
+    overflow-x: hidden;
+    position:static;
+}
 
 nav{
+    position:fixed;
     font-family: var(--font-1);
     border-radius: 8px;
     background: #F8F6F4;
     height: 80px;
     width: 100%;
+    z-index: 1000;
     
 }
 
 label.logo{
+    position: relative;
     color:black;
     font-size: 64px;
     padding: 20px;
@@ -43,6 +51,7 @@ nav ul li{
 }
 
 nav ul li a{
+    position: relative;
     font-family: 'Ruda', sans-serif;
     color:black;
     padding: 7px 13px;
@@ -72,11 +81,29 @@ a.active,a:hover{
     display:none;
 }
 
+nav.sticky{
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+}
+.sticky ul li a{
+    color:rgb(246, 239, 239);
+}
+.sticky .logo{
+    color: #F8F6F4;
+}
+
+.sticky a.active , .sticky a:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transition:  .3s;
+}
+
+
 
     
 
 section{
-    background: url(10.png) no-repeat;
+    background: url(ess_imgs/10.png) no-repeat;
     background-size: cover;
     height: calc(100vh - 80px);
     background-position: center;
@@ -98,16 +125,12 @@ section{
 
     
 }
-.typewriter {
-    overflow: hidden; /* Hide overflowing text */
-    white-space: nowrap; /* Prevent line breaks */
-    letter-spacing: 0.1em; /* Adjust spacing for typewriter effect */
-    animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+.name{
     color: #FFF;
     font-size: 38px;
     font-weight: 400px;
     line-height: auto;
-  }
+}
   
   @keyframes typing {
     from {
@@ -145,66 +168,361 @@ h3{
     box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
 }
 
-@media (max-width:952px){
-    
-    label.logo{
-        font-size: 30px;
-        padding-left: 45px;
-    }
-    nav ul li a{
-        font-size: 16px;
-    }
+
+/* ABOUT PAGE */
+.about{
+   padding-top: 80px;
+    font-family: var(--font-3);
+    color:#FFF;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20vh;
 }
-@media (max-width:858px){
-    body{
-        position: static;
-    }
-    .checkbtn{
-        display: block;
-    }
 
-    ul{
-        position: fixed;
-        width: 100px;
-        height: auto;
-        background:#F8F6F4;
-        top:60px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-    }
-    nav{
-        position:fixed;
-        z-index:100;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 50px 0;
-        line-height: 10px;
-    }
-
-    nav ul li a{
-        font-size: 12px;
-    }
-    
-    a:hover, a.active{
-        background:black;
-        color: white;
-    }
-    #check:checked ~ ul{
-        left:0 ;
-    }
-    
-    .container{
-        width:300px;
-        height:150px;
-        
-    }
-    .typewriter{
-       font-size: 28px; 
-    }
-    h3{
-        font-size: 13px;
-    }
+.aboutme > h1{
+    padding: 2px;
+    margin: 5px;
+    font-size: 40px;
 }
+.aboutme>p{
+    font-size: 20px;;
+}
+.aboutme {
+    grid-column: 1;
+    margin-left: 120px;
+    padding-left: 20px;
+}
+.pimage{
+    grid-column: 2;
+    size: 10px;
+}
+
+/* Skills */
+
+  .cont {
+    margin:auto;
+    width:600px; 
+    font-family: var(--font-2);
+  }
+  .tableWrapper {
+    padding-top:80px;
+    width:550px;
+    height:100%;
+  }
+  .skillGraphItem {
+    color: #F8F6F4;
+    font-size: 16px;
+    line-height: 30px;
+    padding-right: 10px;
+    text-align:right;
+  }
+  div.yellowBarFull { 
+      width: 0px;
+      height: 15px;
+      border-radius: 10px;
+      background: #efc94c;
+      position: relative;
+      animation: barFull 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+  }
+  div.blueBarFull { 
+      width: 0px;
+      height: 15px;
+      border-radius: 10px;
+      background: #467e98;
+      position: relative;
+      animation: barFull 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+  }
+  div.yellowBarHigh { 
+      width: 0px;
+      height: 15px;
+      border-radius: 10px;
+      background: #efc94c;
+      position: relative;
+      animation: barHigh 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+  }
+  div.blueBarHigh { 
+      width: 0px;
+      height: 15px;
+      background: #467e98;
+      border-radius: 10px;
+      position: relative;
+      animation: barHigh 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+  }
+  div.yellowBarHalf { 
+      width: 0px;
+      height: 15px;
+      background: #efc94c;
+      border-radius: 10px;
+      position: relative;
+      animation: barHalf 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+  }
+  div.blueBarHalf { 
+      width: 0px;
+      height: 15px;
+      background: #467e98;
+      border-radius: 10px;
+      position: relative;
+      animation: barHalf 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+  }
+  div.yellowBarLow { 
+      width: 0px;
+      height: 15px;
+      background: #efc94c;
+      border-radius: 10px;
+      position: relative;
+      animation: barLow 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+  }
+  div.blueBarLow { 
+      width: 0px;
+      height: 15px;
+      background: #467e98;
+      border-radius: 10px;
+      position: relative;
+      animation: barLow 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+  }
+  
+  @keyframes barFull {
+      from {width:0px;}
+      to {width:400px;}
+  }
+  @keyframes barHigh {
+      from {width:0px;}
+      to {width:350px;}
+  }
+  @keyframes barHalf {
+      from {width:0px;}
+      to {width:250px;}
+  }
+  @keyframes barLow {
+      from {width:0px;}
+      to {width:150px;}
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
