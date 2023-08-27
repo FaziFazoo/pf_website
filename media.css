@@ -8,7 +8,7 @@
         font-size: 16px;
     }
 }
-@media (max-width:658px){
+@media (max-width:858px){
 
     .checkbtn{
         display: block;
@@ -25,7 +25,7 @@
         transition: all .5s;
     }
     nav{
-        position:relative;
+        position:fixed;
         z-index:100;
     }
 
@@ -94,23 +94,33 @@
         font-size: 10px;
     }
     .cont{
-        margin-left: 5px;
+        display:flex ;
+        align-items: center;
+        justify-content: center;
+        height :100%;
     }
+    .skillGraphItem {
+        color: #F8F6F4;
+        font-size: 12px;
+        line-height: 25px;
+        padding-right: 3px;
+        text-align:right;
+      }
     @keyframes barFull {
-        from {width:0px;}
-        to {width:300px;}
-    }
-    @keyframes barHigh {
         from {width:0px;}
         to {width:250px;}
     }
+    @keyframes barHigh {
+        from {width:0px;}
+        to {width:200px;}
+    }
     @keyframes barHalf {
         from {width:0px;}
-        to {width:150px;}
+        to {width:100px;}
     }
     @keyframes barLow {
         from {width:0px;}
-        to {width:50px;}
+        to {width:25px;}
     }
     
 }

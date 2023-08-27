@@ -200,20 +200,22 @@ h3{
 /* Skills */
 
   .cont {
-    margin:auto;
-    width:600px; 
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+
     font-family: var(--font-2);
   }
+  
   .tableWrapper {
     padding-top:80px;
-    width:550px;
     height:100%;
   }
   .skillGraphItem {
     color: #F8F6F4;
     font-size: 16px;
     line-height: 30px;
-    padding-right: 10px;
+    padding-right: 5px;
     text-align:right;
   }
   div.yellowBarFull { 
